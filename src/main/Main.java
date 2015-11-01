@@ -6,12 +6,12 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		MarkovGenerator generator = new MarkovGenerator(4, args);
+		MarkovGenerator generator = new MarkovGenerator(3, args);
 
 		//generator.dumpCounts();
 		//generator.dumpWords();
 		//return;
-
+		
 		Iterator<String> chains = generator.iterator();
 
 		for (int i = 0; i < 5000 && chains.hasNext(); ++i) {
@@ -22,6 +22,5 @@ public class Main {
 				System.out.print(" ");
 			}
 		}
-
 	}
 }
